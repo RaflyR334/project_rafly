@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Produk;
 use Illuminate\Http\Request;
 use Auth;
 class HomeController extends Controller
@@ -25,9 +25,12 @@ class HomeController extends Controller
     {
         $user = auth::user();
         if ($user->isAdmin == 1){
-            return view('admin.index');
+            $produk = Produk::all();
+            return view('admin.index',['produk'=>$produk]);
         } else {
-            return view('index');
+            $produk = Produk::all();
+            return view('index',['produk'=>$produk]);
         }
+
     }
 }

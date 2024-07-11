@@ -32,7 +32,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>['auth',IsAdmin::class]], functio
 // Route Frontend(depan)
 Route::get('/', [FrontController::class, 'index']);
 Route::get('shop',[FrontController::class, 'shop']);
-Route::get('detail',[FrontController::class, 'detail']);
+Route::get('produk/{id}',[FrontController::class, 'show']);
 // Route::get('product',[FrontController::class, 'product']);
 // Route::get('detailpro',[FrontController::class, 'detailpro']);
 // Route::get('cart',[FrontController::class, 'cart']);

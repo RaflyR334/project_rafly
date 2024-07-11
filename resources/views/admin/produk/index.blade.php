@@ -1,6 +1,5 @@
 @extends('layouts.admin')
 @section('styles')
-<link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.css">
 @endsection
 
 @section('content')
@@ -49,10 +48,12 @@
                             <form action="{{route('produk.destroy', $data->id)}}" method="post">
                                 @csrf
                                 @method('DELETE')
+                                <a href="{{ route('produk.show', $data->id) }}"
+                                                class="btn btn-sm btn-outline-dark">Show</a> 
                                 <a href="{{route('produk.edit', $data->id)}}" class="btn btn-sm btn-warning">
                                     Edit
                                 </a>
-                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are You Sure?')">
+                                <button type="submit" class="btn btn-sm btn-danger"  onclick="return confirm('Are You Sure?')">
                                     Delete
                                 </button>
                             </form>
@@ -67,9 +68,4 @@
 @endsection
 
 @push('scripts')
-<script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
-<script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
-<script>
-    new DataTable('#example');
-</script>
 @endpush

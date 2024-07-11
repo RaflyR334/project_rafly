@@ -17,7 +17,6 @@ class UserController extends Controller
     public function index()
     {
         $user = User::all();
-        confirmDelete('Delete', 'yakin?');
         return view('admin.user.index', compact('user'));
     }
 

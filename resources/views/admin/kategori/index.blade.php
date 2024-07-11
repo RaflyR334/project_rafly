@@ -1,6 +1,5 @@
 @extends('layouts.admin')
 @section('styles')
-<link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.css">
 @endsection
 
 @section('content')
@@ -53,9 +52,4 @@
 @endsection
 
 @push('scripts')
-<script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
-<script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
-<script>
-    new DataTable('#example');
-</script>
 @endpush

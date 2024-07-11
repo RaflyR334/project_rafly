@@ -97,11 +97,6 @@
               <div data-i18n="Analytics">Produk</div>
             </a>
           </li>
-          <li class="menu-item">
-            <a href="{{route('user.index')}}" class="menu-link">
-              <div data-i18n="Analytics">User</div>
-            </a>
-          </li>
         </ul>
       </li>
 
